@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "Shop App"
+  },
+  "auth": {
+    "login": "Login",
+    "username": "Username",
+    "password": "Password",
+    "login_error": "Invalid username or password",
+    "login_success": "Successfully logged in"
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty",
+    "total": "Total",
+    "checkout": "CHECKOUT",
+    "remove": "Remove",
+    "add": "Add to Cart"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "english": "English",
+    "mongolian": "Mongolian"
+  },
+  "shop": {
+    "title": "Shop"
+  },
+  "product": {
+    "price": "Price",
+    "description": "Description",
+    "category": "Category",
+    "rating": "Rating"
+  },
+  "profile": {
+    "title": "Profile",
+    "account": "Account",
+    "settings": "Settings",
+    "favorites": "My Favorites",
+    "order_history": "Order History",
+    "language": "Language",
+    "logged_in": "Logged in",
+    "not_logged_in": "Not logged in",
+    "login": "Login",
+    "logout": "Logout",
+    "personal_info": "Personal Information",
+    "name": "Name",
+    "username": "Username",
+    "email": "Email",
+    "phone": "Phone"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty": "No favorite items yet",
+    "added": "Added to favorites",
+    "removed": "Removed from favorites"
+  },
+  "messages": {
+    "login_required_favorites": "Please login to add to favorites",
+    "login_required_cart": "Please login to add to cart"
+  }
+} 

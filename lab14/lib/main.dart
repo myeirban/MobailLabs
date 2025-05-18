@@ -28,8 +28,21 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class PlacesScreen extends StatelessWidget {
+class PlacesScreen extends StatefulWidget {
   const PlacesScreen({Key? key}) : super(key: key);
+
+  @override
+  State<PlacesScreen> createState() => _PlacesScreenState();
+}
+
+class _PlacesScreenState extends State<PlacesScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.microtask(() => 
+      Provider.of<PlacesProvider>(context, listen: false).loadPlaces()
+    );
+  }
 
   @override
   Widget build(BuildContext context) {

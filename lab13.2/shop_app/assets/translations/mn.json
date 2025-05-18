@@ -1,0 +1,57 @@
+{
+  "app": {
+    "title": "Дэлгүүр",
+    "settings": "Тохиргоо",
+    "language": "Хэл",
+    "english": "Англи",
+    "mongolian": "Монгол"
+  },
+  "auth": {
+    "login": "Нэвтрэх",
+    "username": "Хэрэглэгчийн нэр",
+    "password": "Нууц үг",
+    "login_success": "Амжилттай нэвтэрлээ",
+    "login_error": "Нэвтрэхэд алдаа гарлаа"
+  },
+  "cart": {
+    "title": "Сагс",
+    "empty": "Таны сагс хоосон байна",
+    "total": "Нийт",
+    "checkout": "Төлбөр төлөх",
+    "remove": "Устгах",
+    "add": "Сагсанд нэмэх"
+  },
+  "product": {
+    "price": "Үнэ",
+    "description": "Тайлбар",
+    "category": "Ангилал",
+    "rating": "Үнэлгээ"
+  },
+  "profile": {
+    "title": "Профайл",
+    "account": "Бүртгэл",
+    "settings": "Тохиргоо",
+    "favorites": "Миний дуртай",
+    "order_history": "Захиалгын түүх",
+    "language": "Хэл",
+    "logged_in": "Нэвтэрсэн",
+    "not_logged_in": "Нэвтрээгүй",
+    "login": "Нэвтрэх",
+    "logout": "Гарах",
+    "personal_info": "Хувийн мэдээлэл",
+    "name": "Нэр",
+    "username": "Хэрэглэгчийн нэр",
+    "email": "И-мэйл",
+    "phone": "Утас"
+  },
+  "favorites": {
+    "title": "Дуртай",
+    "empty": "Дуртай бараа байхгүй байна",
+    "added": "Дуртай хэсэгт нэмэгдлээ",
+    "removed": "Дуртай хэсгээс хасагдлаа"
+  },
+  "messages": {
+    "login_required_favorites": "Дуртай хэсэгт нэмэхийн тулд нэвтрэх шаардлагатай",
+    "login_required_cart": "Сагсанд нэмэхийн тулд нэвтрэх шаардлагатай"
+  }
+} 

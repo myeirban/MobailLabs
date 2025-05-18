@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "email": "john@gmail.com",
+    "username": "johnd",
+    "password": "m38rmF$",
+    "name": {
+      "firstname": "John",
+      "lastname": "Doe"
+    },
+    "phone": "1-800-123-4567",
+    "avatar": "https://robohash.org/johnd"
+  },
+  {
+    "id": 2,
+    "email": "morrison@gmail.com",
+    "username": "mor_2314",
+    "password": "83r5^_",
+    "name": {
+      "firstname": "David",
+      "lastname": "Morrison"
+    },
+    "phone": "1-800-123-4568",
+    "avatar": "https://robohash.org/david"
+  },
+  {
+    "id": 3,
+    "email": "kevin@gmail.com",
+    "username": "kevinryan",
+    "password": "kev02937@",
+    "name": {
+      "firstname": "Kevin",
+      "lastname": "Ryan"
+    },
+    "phone": "1-800-123-4569",
+    "avatar": "https://robohash.org/kevin"
+  },
+  {
+    "id": 4,
+    "email": "kate@gmail.com",
+    "username": "kate_h",
+    "password": "kfejk@122",
+    "name": {
+      "firstname": "Kate",
+      "lastname": "Hale"
+    },
+    "phone": "1-800-123-4570",
+    "avatar": "https://robohash.org/kate"
+  }
+] 

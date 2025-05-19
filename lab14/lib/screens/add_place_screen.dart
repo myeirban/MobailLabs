@@ -6,7 +6,8 @@ import 'package:location/location.dart';
 import 'package:provider/provider.dart';
 import '../models/place.dart';
 import '../providers/places_provider.dart';
-
+//ene bol hereglegch shine gazar nemeh bolomjtoi delgets bogood zurag avah,bairlal
+// oloh,garchig bolon,tailbar bicih bolomjtoi
 class AddPlaceScreen extends StatefulWidget {
   const AddPlaceScreen({Key? key}) : super(key: key);
 
@@ -15,34 +16,34 @@ class AddPlaceScreen extends StatefulWidget {
 }
 
 class _AddPlaceScreenState extends State<AddPlaceScreen> {
-  final _formKey = GlobalKey<FormState>();
-  final _titleController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();//tsenher ni formiin niit toloviig udirdaj avah,zorilgotoi
+  final _titleController = TextEditingController();//text talbaruudiin utgiig udirdaj hadgalah zorilgotoi
   final _descriptionController = TextEditingController();
   dynamic _pickedImage;
   LocationData? _currentLocation;
-
+//1.
   Future<void> _pickImage() async {
     final picker = ImagePicker();
-    final pickedImage = await picker.pickImage(source: ImageSource.camera);
+    final pickedImage = await picker.pickImage(source: ImageSource.camera);//utasnii cameriig neej zurah avch baiga heseg
     if (pickedImage == null) return;
 
     setState(() {
-      if (kIsWeb) {
+      if (kIsWeb) {//app web orchind ajillaj bnu gedgiig shalgaj,zurag File bish path helbereer hadgalahiig shiiddeg.
         _pickedImage = pickedImage.path;
       } else {
         _pickedImage = File(pickedImage.path);
       }
     });
   }
-
+//2.
   Future<void> _getCurrentLocation() async {
-    final location = Location();
+    final location = Location();//location plugin iin obiekt uusgej bn
     try {
-      final locationData = await location.getLocation();
+      final locationData = await location.getLocation();//tohooromjoos gazriin bairshliig avdag.
       setState(() {
         _currentLocation = locationData;
       });
-    } catch (e) {
+    } catch (e) {//bairshil avch chadahgui bol hereglegchid scaffold messenger ashiglan snackBar gargaj, aldaani tuhai medegdsen
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Could not get location. Please try again.'),
@@ -51,6 +52,8 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
     }
   }
 
+//3.formiig shalgaj,zurag bolon bairshil baigaa esehiig shalgaj ,Place obiekt uusgej
+// PlacesProvider ashiglan ogodliig hadgalna.
   void _savePlace() {
     if (!_formKey.currentState!.validate() || _pickedImage == null || _currentLocation == null) {
       return;
@@ -62,7 +65,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
       location: '${_currentLocation!.latitude}, ${_currentLocation!.longitude}',
       description: _descriptionController.text,
     );
-
+//bid zovhon ogogdold uildel hiij baigaa yum
     Provider.of<PlacesProvider>(context, listen: false).addPlace(place);
     Navigator.of(context).pop();
   }
@@ -147,7 +150,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
   }
 
   @override
-  void dispose() {
+  void dispose() {//textEditingController uudiig tseverlej ogson,sanah oig aldagdalgui choloolohiin tuld ashigladag.
     _titleController.dispose();
     _descriptionController.dispose();
     super.dispose();

@@ -6,7 +6,7 @@ import 'screens/place_detail_screen.dart';
 import 'screens/add_place_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp());//anh run app ashiglan MyApp ajilluuldag
 }
 
 class MyApp extends StatelessWidget {
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
+//initstate() ashiglan ogogdliig anh achaaldag.
 class PlacesScreen extends StatefulWidget {
   const PlacesScreen({Key? key}) : super(key: key);
 
@@ -39,7 +39,7 @@ class _PlacesScreenState extends State<PlacesScreen> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() => 
+    Future.microtask(() => //microtask ashiglan widget buren buteegdsenii daraa loadPlaces() funktsiig ajilluuldag.
       Provider.of<PlacesProvider>(context, listen: false).loadPlaces()
     );
   }
@@ -50,7 +50,7 @@ class _PlacesScreenState extends State<PlacesScreen> {
       appBar: AppBar(
         title: const Text('My Places'),
         actions: [
-          IconButton(
+          IconButton(//+ tovch darahad MaterialPageRoute oor damjuulan shiljdeg
             icon: const Icon(Icons.add),
             onPressed: () {
               Navigator.of(context).push(
@@ -70,6 +70,7 @@ class _PlacesScreenState extends State<PlacesScreen> {
               child: Text('No places added yet!'),
             );
           }
+          //list view builder ni item uudiig dinamikaar buteej UI achaalal bagatai bailgah uuregtei
           return ListView.builder(
             itemCount: places.length,
             itemBuilder: (ctx, index) {
@@ -77,11 +78,11 @@ class _PlacesScreenState extends State<PlacesScreen> {
               return ListTile(
                 leading: CircleAvatar(
                   radius: 26,
-                  backgroundImage: FileImage(File(place.image)),
+                  backgroundImage: FileImage(File(place.image)),//zurag ni tohooromjiin Dotood fail sistem hadgalagdsan.
                 ),
                 title: Text(place.title),
                 subtitle: Text(place.location),
-                onTap: () {
+                onTap: () {//jagsaaltiin mor deer darval PlaceDetailScreen ruu tuhain gazrin id-g dmjuulan shiljine.
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (ctx) => PlaceDetailScreen(placeId: place.id!),

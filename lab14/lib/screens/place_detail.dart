@@ -91,4 +91,4 @@ class PlaceDetailScreen extends StatelessWidget {
       ),
     );
   }
-} 
+}

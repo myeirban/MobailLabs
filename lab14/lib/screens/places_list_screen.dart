@@ -3,7 +3,7 @@
   import 'package:provider/provider.dart';
   import '../providers/places_provider.dart';
   import 'place_detail.dart';
-
+//ene delgets ni hereglegchiin nemsen gazriin jagsaaltiig haruulj,tuhain gazartai holbootoi delgerengui bolomjiig olgodog delgets
   class PlacesListScreen extends StatelessWidget {
     const PlacesListScreen({Key? key}) : super(key: key);
 
@@ -15,12 +15,13 @@
         ),
         body: Consumer<PlacesProvider>(
           builder: (ctx, placesProvider, child) {
-            final places = placesProvider.places;
-            if (places.isEmpty) {
+            final places = placesProvider.places;//SQLite ogogdliin sangaas achaalagdsan medeelel.
+            if (places.isEmpty) {//gazriin jagsaalt hooson bol
               return const Center(
                 child: Text('No places added yet!'),
               );
             }
+            //ListView.builder ashiglan dinamikaar gazriin jagsaaltiig buteej bn
             return ListView.builder(
               itemCount: places.length,
               itemBuilder: (ctx, index) {
@@ -32,13 +33,14 @@
                     contentPadding: const EdgeInsets.all(16),
                     leading: ClipRRect(
                       borderRadius: BorderRadius.circular(8),
-                      child: Image.file(
+                      child: Image.file(//delgets deer zurag haruulj bn
                         File(place.image),
                         width: 100,
                         height: 100,
                         fit: BoxFit.cover,
                       ),
                     ),
+                    //clipreact ni bulang dugui helbertei bolgon haragduulah zoriulalttai.
                     title: Text(
                       place.title,
                       style: Theme.of(context).textTheme.titleLarge,
@@ -51,7 +53,7 @@
                           'Location: ${place.location}',
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
-                        if (place.description != null) ...[
+                        if (place.description != null) ...[//null baival ogt haruulahgui
                           const SizedBox(height: 4),
                           Text(
                             'Description: ${place.description}',
@@ -77,7 +79,7 @@
                               ),
                               TextButton(
                                 onPressed: () {
-                                  placesProvider.deletePlace(place.id!);
+                                  placesProvider.deletePlace(place.id!);//Delete iin gol ustgah uil yavts
                                   Navigator.of(ctx).pop();
                                 },
                                 child: const Text('Delete'),
